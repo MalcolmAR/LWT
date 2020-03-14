@@ -28,6 +28,17 @@ class LWT:
         self.break_alarm_file_path = ''
 
     """
+    This method runs select() and alarm() to get the required files, then
+    runs work(), because these are always the first thing I run
+    """
+
+    def start(self):
+
+        self.select()
+        self.alarm()
+        self.work()
+
+    """
     This creates a list of row numbers
     (self.project_goals_int_list) for goals that are
     listed in any of this project's entries.
