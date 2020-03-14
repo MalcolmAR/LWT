@@ -3,7 +3,7 @@ from openpyxl import Workbook, load_workbook
 
 """
 TASK: replace the select project with comma after thing, I keep screwing it up
-TASK: should look up using ods files
+TASK: make it so it can use a greater range of spreadsheet and music files
 """
 
 
