@@ -18,12 +18,14 @@ In a folder that contains some big-part of your work, like a job for a client, o
 
 starting lwt.py and goals.py:
 
-Step 1) start the python shell (if in Windows, from command line type: title tracker)
-Step 2) >>> from lwt import LWT
-Step 3) >>> a_variable_name_for_your_project_probably_best_to_keep_it_short = LWT() 
-Step 4) start another python shell (if in Windows, from command line type: title goals)
-Step 5) >>> from goals import Goals
-Step 6) >>> a_variable_name_for_your_project_probably_best_to_keep_it_short = LWT() 
+<ul>
+  <li>Step 1) start the python shell (if in Windows, from command line type: title tracker)</li>
+  <li>Step 2) >>> from lwt import LWT</li>
+  <li>Step 3) >>> a_variable_name_for_your_project_probably_best_to_keep_it_short = LWT()</li>
+  <li>Step 4) start another python shell (if in Windows, from command line type: title goals)</li>
+  <li>Step 5) >>> from goals import Goals</li>
+  <li>Step 6) >>> a_variable_name_for_your_project_probably_best_to_keep_it_short = LWT()</li>
+</ul>
 
 running lwt.py methods():
 
