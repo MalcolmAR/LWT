@@ -33,13 +33,32 @@ In a folder that contains some big-part of your work, like a job for a client, o
 
 I run the class methods individually from this point. The following methods represent some particular task, except for start(): it runs the three methods I almost always use first in a sequence.
 <ul>
-  <li>method 1) start() #runs the next three methods in a sequence</li>
-<li>method 2) select() #lists all the directory and sub-directories' .xlsx file paths with "tracking" in the path and asks you to select one (i.e. the project you're working on)</li>
-<li>method 3) alarm() #lists all the directory and sub-directories' .mp3 files and asks you to choose one for the break timer and one for the work timer</li>
-<li>method 4) work() asks for the number of work minutes, then break minutes, then displays a countdown timer for each beginning with the work timer. When the work-timer expires, it asks you to select or write the work-type, it displays notes and asks you to add any, and it displays stats for the session and continues on to the break timer. It will repeat this session until you ctrl-c to break from the script.</li>
-<li>method 5) timer(integer_for_number_of_minutes) this method simply runs the countdown timer for the given number of minutes. I often use this to run a break when I exited the work() cycle after the work segment for whatever reason, because starting the cycle always goes to work first.</li>
-  <li>method 6)</li>
+  <li>start() runs the next three methods in a sequence</li>
+<li>select() lists all the directory and sub-directories' .xlsx file paths with "tracking" in the path and asks you to select one (i.e. the project you're working on)</li>
+<li>alarm() lists all the directory and sub-directories' .mp3 files and asks you to choose one for the break timer and one for the work timer</li>
+<li>work() asks for the number of work minutes, then break minutes, then displays a countdown timer for each beginning with the work timer. You can also enter run instead of an integer for minutes, which instead of running a timer will simply ask you to hit enter when the work or break session is over. When the work-timer expires, it asks you to select or write the work-type, then it displays notes previously written in this session and lets you write a new note, and finally it displays stats for the session and continues on to the break timer. It will repeat this cycle until you ctrl-c to break from the script.</li>
+<li>timer(integer_for_number_of_minutes) this method simply runs the countdown timer for the given number of minutes. I often use this to run a break when I exited the work() cycle after the work segment for whatever reason, because starting the cycle always goes to work first.</li>
+  <li>info_set() let's you set the number of work minutes and break minutes without running work(), in other words without actually using the timer. I always use this before using the next method, entry().</li>
+  <li>entry() use this to make a work session entry without actually running the timers. The number of minutes it enters will be whatever was set last with work(), or with info_set().
+  <li>stats() this will show you the amount of time you've spent on each work-type by day, then as a total, and then it shows the total time spent on the project.</li> 
 </ul>
+
+<h3>runnin goals.py methods():</h3>
+
+Just like with lwt.py, I use these scripts by running class methods. An entry into the Goals.xlsx file includes a field for all projects associated with the goal. When you check how long you've been working on a goal, what you'll see is a sum of minutes you've spent working on all projects associated with the goal since the goal's start date. 
+
+<h4>establishing and accomplishing goals</h4>
+
+<ul>
+  <li>gselect() lists all .xlsx file-paths with goals in the file-path and asks you to select one. Remember that one goals.xlsx file is created for a collection of projects in one folder (which should represent some larger category of work that can be subdivided into a number of projects). This is important because for each new goal, goals.py will ask you to associate it with one or more projects from the same folder with the goals.py file. This lets you set project-specific goals or goals for the larger category of work that span multiple projects</li>
+  <li>add() lets you add a new goal and select which projects the goal is affiliated with.</li>
+  <li>edit() lets you edit the goal (i.e. the way it's written)</li>
+  <li>accomplished() set's the goal as accomplished and time-stamps the end time (the time it took to complete the goal will be the sum of minutes spent on all affiliated projects between the start and end times).
+  <li>stop() when the stop field has a value it decalres the goal null, which means it will no longer show up in stats. This can be used when you no longer want to work on a goal, or when a goal has been accomplished but you no longer want it showing up in the stats. To delete a goal, edit the spread sheet, but make sure to delete the whole spread sheet row or else LWT will keep reading and reproducing the empty values in the row.</li>  
+</ul>
+
+<h4>working with goal stats</h4>
+
 
 
 
