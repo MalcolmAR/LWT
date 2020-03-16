@@ -1,4 +1,4 @@
-Welcome to Local Work Tracker! 
+Welcome to <strong>Local Work Tracker<strong>! 
 
 Use lwt.py to track project work sessions, and goals.py to track project goals. This document explains how, but it assumes the audience has at least my level of skill in Python (intermediate based on about two years practice). 
 
