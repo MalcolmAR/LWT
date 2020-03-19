@@ -65,7 +65,7 @@
 <h4>Goal stats and other tools</h4>
 
 <ul>
-  <li>stats(*args) this will give a list of all goals with the total time spent on each goal, and a breakdown of time spent on each work-type for each project. The argument 'running' will return a list of goals excluding those that are accomplished. The argument 'lite' will return just the total time spent on the goal, none of the other stats.<li>
+  <li>stats(*args) this will give a list of all goals with the total time spent on each goal, and a breakdown of time spent on each work-type for each project. The argument 'running' will return a list of goals excluding those that are accomplished. The argument 'lite' will return just the total time spent on the goal, none of the other stats.</li>
   <li>pselect(*args) this will ask you to select a project, then will list the goals and stats affiliated with that project. The 'lite' and 'running' arguments mentioned in stats(*args) will work here too.</li>
   <li>notes(*args) this allows you to add a note to the goal. The note will have a date-stamp added (a date-string in the note-string, not a datetime object), and previous notes will be displayed for the selected goal. The argument 'list' can be used to simply display the notes, not add one.</li>
 </ul>
