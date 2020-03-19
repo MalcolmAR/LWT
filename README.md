@@ -4,9 +4,8 @@
 
 <h3>Other Resources:</h3>
 
-<p>You can watch my demo-video with detailed directions for using the scripts, meant for people who have no knowledge of such things, and it includes intros to programming concepts and helpful links along the way: (coming by April 1st 2020)</p>
-
-<p>You can also read an article about the tracking method, how I came to use it and the concepts I'm testing out with this production: (coming by March 20th 2020)</p>
+<p>You can read an article about the tracking method, how I came to use it, and the concepts I'm testing out with this production:</p>
+https://www.linkedin.com/pulse/work-goal-tracking-tips-scripts-python-how-became-my-little-malcolm/?published=t
 
 <h2>How to set it up:</h2>
 
