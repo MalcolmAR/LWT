@@ -4,7 +4,7 @@ Use lwt.py to track project work sessions, and goals.py to track project goals. 
 
 <h3>Other Resources:</h3>
 
-You can read an article with detailed directions for using the scripts, meant for people who have no knowledge of such things, and it includes intros to programming concepts and helpful links along the way: (coming by March 20th 2020)
+You can watch my demo-video with detailed directions for using the scripts, meant for people who have no knowledge of such things, and it includes intros to programming concepts and helpful links along the way: (coming by April 1st 2020)
 
 You can also read an article about the tracking method, how I came to use it and the concepts I'm testing out with this production: (coming by March 20th 2020)
 
