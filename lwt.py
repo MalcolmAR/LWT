@@ -5,6 +5,13 @@ from datetime import timedelta
 """
 TASK: Search for unused variables
 TASK: Put numbers after filenames for file selection
+TASK: Bring up stats for today after each session is saved
+AMBITION: expand the file-types that can be used for spreadsheets and alarms
+AMBITION: Create a method for creating new spreadsheets, and perhaps other controls over files
+AMBITION: Create error messages wherever I've used try and except
+FUTURE AMBITION: Have the script write stats into a spread sheet table, create summaries of stats,
+and other visualization ideas
+FUTURE AMBITION: Combine goal.py and lwt.py into a program with concurrent operation
 """
 
 class LWT:
