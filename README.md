@@ -14,7 +14,7 @@
 
 <p>The scripts are meant to be run from a Python shell in Windows Command or Mac Terminal. They save data to spreadsheets that are saved in sub-directories of the folder the scripts are saved in. Similarly, the work-timer and break-timer alarms are chosen from .mp3 files available in sub-directories of the folder the scripts are saved in.</p>
 <ul>
-<li>Step 1) Download or Clone the scripts to a folder that is in a higher-level directory than any of your project folders (where you'll keep their respective tracking spreadsheets), but not higher than you need because the lwt.py script searches all sub-folders for .mp3 and .xlsx files, which could take a while depending on how many files it has to search through.<li>
+<li>Step 1) Download or Clone the scripts to a folder that is in a higher-level directory than any of your project folders (where you'll keep their respective tracking spreadsheets), but not higher than you need because the lwt.py script searches all sub-folders for .mp3 and .xlsx files, which could take a while depending on how many files it has to search through.</li>
  <li>Step 2) In a folder that contains some big-part of your work, like a job for a client, or an area of your life (e.g. chores), or anything that can be divided into one or more projects, create a folder called "tracking".</li>
  <li>In the folder create a spreadsheet called goals.xlsx, and a .xlsx file for each project (called anything but goals).</li>
 <ul>
