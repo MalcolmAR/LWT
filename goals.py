@@ -2,9 +2,16 @@ import glob, re, datetime, platform
 from openpyxl import Workbook, load_workbook
 
 """
+TASK: merge info_set and entry
 TASK: replace the select project with comma after thing, I keep screwing it up
 TASK: make it so it can use a greater range of spreadsheet and music files
+AMBITION: Create a method for creating new spreadsheets, and perhaps other controls over files
+AMBITION: Create error messages wherever I've used try and except
+FUTURE AMBITION: Have the script write stats into a spread sheet table, create summaries of stats, 
+and other visualization ideas
+FUTURE AMBITION: Combine goal.py and lwt.py into a program with concurrent operation
 """
+
 
 
 class Goals:
@@ -165,7 +172,6 @@ class Goals:
 
     """
     This creates a list of projects in the directory
-    note:
     """
     def plist(self):
 
@@ -241,7 +247,7 @@ class Goals:
         goal_input = input()
         print('\n')
         self.plist()
-        print('\nCOMMA! select the affiliated project for the goal by entering a number followed by a comma')
+        print('\nCOMMA! select the affiliated projects for the goal by entering their numbers followed by a comma')
         project_selections = input()
         x_index = 0
         digit_string = ''
@@ -272,7 +278,8 @@ class Goals:
         wb.save(filename=self.goals_filename)
 
     """
-    Need to delete a goal, null a goal, edit the goal
+    This adds a datestamp to the stop field, which indicates that the goal is now null,
+    that is it doesn't get displayed in stats or lists
     """
 
     def stop(self):
@@ -286,6 +293,12 @@ class Goals:
         sheet.cell(column=5, row=goal_stop_int).value = datetime.datetime.now()
         wb.save(filename=self.goals_filename)
 
+    """
+    This adds a time stamp to the accomplished field, which indicates the end date
+    of the goal. This will cause the goal to be displayed as accomplished, and
+    stats will display sums from between the start date and this end date.
+    """
+
     def accomplished(self):
         self.glist('running')
         wb = load_workbook(filename=self.goals_filename)
@@ -298,6 +311,10 @@ class Goals:
         wb.save(filename=self.goals_filename)
         goal_string = sheet.cell(column=2, row=goal_accomplished_int).value
         print('\ncongratulations on accomplishing the goal: ' + '\n' + goal_string + '\n')
+
+    """
+    This allows you to re-set the field for the string that is the goal
+    """
 
     def edit(self):
         self.glist('running')
@@ -316,8 +333,7 @@ class Goals:
     this method calculates the total time spent on all goals,
     with breakdowns for each involved project. The argument 'lite'
     will print only the goals and goal time totals (without the project breakdowns).
-
-
+    The argument 'running' will create a list that excludes accomplished goals
     """
 
     def stats(self, *args):
@@ -361,6 +377,14 @@ class Goals:
                 This part sets the first and last row to check in each project
                 """
                 sum_range_list = []
+                #this replaces the slashes in the directory string to fit either Windows or Mac
+                if platform.system() == 'Windows':
+                    slash_to_replace = '/'
+                    slash_replacement = '\\'
+                else:
+                    slash_to_replace = '\\'
+                    slash_replacement = '/'
+                project = project.replace(slash_to_replace, slash_replacement)
                 sum_wb = load_workbook(filename=project)
                 sum_sheet = sum_wb.active
                 self.length(sum_sheet)
